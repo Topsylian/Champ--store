@@ -1,0 +1,1293 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  background-color: white;
+  color: black;
+}
+
+@keyframes dances {
+  0% {
+    opacity: 0.5;
+    background-color: #2c7860;
+    color: white;
+    transform: rotate(0);
+  }
+  25% {
+    background-color: black;
+    opacity: 1;
+    color: white;
+    transform: rotate(0);
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 1;
+    background-color: blue;
+    color: yellow;
+    transform: rotate(0);
+  }
+  100% {
+    color: red;
+    transform: translateX(100%);
+    background-color: pink;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dance {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0eg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    color: #2c7860;
+  }
+  50% {
+    color: yellow;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes head {
+  0% {
+    background-image: linear-gradient(180deg, #2c7860 50%, white 10%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background-image: linear-gradient(180deg, white 50%, #2c7860 10%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+p {
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 7%;
+  margin-bottom: 35px;
+}
+
+.logo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans";
+}
+
+.nav {
+  display: none;
+}
+
+.Log {
+  display: none;
+}
+
+.home-wrapper {
+  margin-bottom: 50px;
+}
+
+.homepage {
+  background-color: black;
+  background-image: url(card-bck.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 7%;
+  margin-bottom: 35px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 0px 1px 1px #bbbbbb;
+}
+
+.homepage p {
+  color: white;
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  padding: 10px;
+  -webkit-backdrop-filter: blur(12px);
+  width: 100%;
+  word-spacing: 2px;
+	border-radius: 5px;
+}
+
+.topic {
+  animation: head 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.homepage h1 {
+  animation: head 0.95s linear 0.5s infinite alternate-reverse both;
+  color: white;
+  font-size: 8.5vw;
+	width: 100%;
+}
+
+.homepage-wrapper {
+  background-color: #00000090;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.top-details,
+.mid-details,
+.end-details,
+.home-btn {
+  margin-bottom: 35px;
+}
+
+.top-details p {
+  letter-spacing: 10px;
+}
+
+.home-btn button {
+  border: none;
+  padding: 15px 35px;
+  text-align: center;
+  background-color: white;
+  border-radius: 7px;
+  font-size: 14px;
+  transition: 0.5s ease-in-out;
+}
+
+button:focus {
+  background-color: #2c7860;
+  color: white;
+}
+
+@keyframes homepage {
+  0% {
+    background: linear-gradient(135deg, white 50%, #2c7860 10%);
+  }
+
+  100% {
+    background: linear-gradient(135deg, #2c7860 50%, white 10%);
+  }
+}
+
+button:hover {
+  animation: homepage 0.95s linear 0.5s infinite alternate-reverse both;
+  background-color: #2c7860;
+}
+
+.brands {
+  padding: 0 7%;
+  color: #bbbbbb;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-family: cursive;
+}
+
+.sales-wrapper {
+  margin-bottom: 50px;
+}
+
+.sales {
+  padding: 0 7%;
+}
+
+.sales-top {
+  margin-bottom: 35px;
+}
+
+.sales-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.sales-top {
+  text-align: center;
+}
+
+.sales-nav a {
+  text-decoration: none;
+  padding: 5px;
+  color: inherit;
+  border-bottom: 3px solid transparent;
+  transition: 0.85s ease-in-out;
+}
+
+@keyframes border {
+  0% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid red;
+  }
+
+  20% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid green;
+  }
+
+  40% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid black;
+  }
+
+  60% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid yellow;
+  }
+
+  80% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid cyan;
+  }
+
+  100% {
+    transition: 0.85s ease-in-out;
+    border-bottom: 3px solid pink;
+  }
+}
+
+.sales-nav a:hover {
+  border-bottom: 3px solid #2c7860;
+  animation: border 0.85s linear 0.85s infinite alternate-reverse both;
+}
+
+.sales-products {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  color: black;
+}
+
+.sales-products p {
+  font-size: 14px;
+}
+
+.sales-products a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+}
+
+.sales-product-wrap {
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px #bbbbbb;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.img-sales {
+  display: flex;
+  justify-content: center;
+  animation: img 0.95s linear 0.5s infinite alternate-reverse both;
+  background-color: black;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: 0.75s ease-in-out;
+  padding: 1px;
+  margin-bottom: 10px;
+}
+
+.img-sales:hover {
+  transform: scale(0.9);
+}
+
+.img-sales-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.9);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.img-sales-wrap:hover {
+  transform: scale(1);
+}
+
+.img-sales-wrap img {
+  width: 100%;
+  transform: scale(0.9);
+  transform: rotate(0deg);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.img-sales-wrap img:hover {
+  transform: scale(1);
+  transform: rotate(-45deg);
+}
+
+.carry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carry a {
+  color: #2c7860;
+  border-bottom: 3px solid transparent;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.carry a:hover {
+  border-bottom: 3px solid #2c7860;
+}
+
+.about-wrapper {
+  padding: 0 7%;
+  margin-bottom: 50px;
+  background-color: #f1f0f055;
+  overflow: hidden;
+}
+
+.about {
+  padding-top: 35px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.about-left {
+  width: 100%;
+}
+
+.about-top,
+.about-mid,
+.about-end {
+  margin-bottom: 35px;
+}
+
+.about-mid p {
+  width: 100%;
+}
+
+.about-end a {
+  text-decoration: none;
+  padding: 15px 35px;
+  text-align: center;
+  background-color: #2c7860;
+  color: white;
+  font-size: 14px;
+  border-radius: 7px;
+  transition: 0.5s ease-in-out;
+}
+
+.about-end a:focus {
+  background-color: black;
+  color: white;
+}
+
+@keyframes about {
+  0% {
+    background: linear-gradient(90deg, white 50%, black 10%);
+  }
+
+  100% {
+    background: linear-gradient(90deg, black 50%, white 10%);
+  }
+}
+
+.about-end a:hover {
+  animation: img 0.95s linear 0.5s infinite alternate-reverse both;
+  background-color: black;
+  color: white;
+}
+
+.about-social-wrapper {
+  padding-top: 35px;
+  display: flex;
+  gap: 25px;
+}
+
+.about-social-wrapper > div > img {
+  animation: about 0.95s linear 0.5s infinite alternate-reverse both;
+  border-radius: 5px;
+}
+
+.about-right {
+  width: 100%;
+}
+
+.about-right-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-right-img img {
+  width: 100%;
+}
+
+.voucher {
+  padding: 0 7%;
+  margin-bottom: 70px;
+  cursor: pointer;
+}
+
+.voucher-wrapper {
+  background-image: url(logo-pic.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  height: 500px;
+  color: white;
+}
+
+.voucher-box {
+  width: 100%;
+  background-color: #000000c1;
+  height: 500px;
+  border-radius: 10px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.voucher-details h1 {
+  background-color: #ffffff10;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 55px;
+  font-size: 5vw;
+  animation: bounce 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.voucher-nav {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+.voucher-nav a {
+  text-decoration: none;
+  padding: 15px 35px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  border-radius: 7px;
+  transition: 0.5s ease-in-out;
+}
+
+.voucher-nav a:focus {
+  background-color: #2c7860;
+  color: white;
+}
+
+.voucher-nav a:hover {
+  animation: homepage 0.95s linear 0.5s infinite alternate-reverse both;
+  background-color: #2c7860;
+}
+
+.voucher-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  width: 100%;
+}
+
+.voucher-img > div {
+  width: 60%;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  animation: dance 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.voucher-img img {
+  width: 100%;
+  transform: rotate(-40deg);
+}
+
+.shop-wrapper {
+  margin-bottom: 50px;
+}
+
+.our-shop {
+  padding: 0 7%;
+  margin-bottom: 70px;
+}
+
+.shop-top {
+  margin-bottom: 35px;
+}
+
+.shop-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.shop-top {
+  text-align: left;
+}
+
+.shop-nav a {
+  text-decoration: none;
+  padding: 5px;
+  color: inherit;
+  border-bottom: 3px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+.shop-nav .active > a {
+  border-bottom: 3px solid #2c7860;
+}
+
+.shop-nav a:hover {
+  border-bottom: 3px solid #2c7860;
+  animation: border 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.shop-nav a:focus {
+  animation: border 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.shop-products {
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  color: black;
+}
+
+.shop-products p {
+  font-size: 14px;
+}
+
+.shop-products a {
+  text-decoration: none;
+  padding: 5px;
+  color: black;
+}
+
+.shop-product-wrap {
+  background-color: white;
+  box-shadow: 0px 0px 1px 1px #bbbbbb;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+@keyframes img {
+  0% {
+    background: linear-gradient(135deg, #2c7860 40%, black 10%);
+  }
+
+  100% {
+    background: linear-gradient(135deg, black 40%, #2c7860 10%);
+  }
+}
+
+.img-shop {
+  display: flex;
+  justify-content: center;
+  animation: img 0.95s linear 0.5s infinite alternate-reverse both;
+  background-color: black;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: 0.75s ease-in-out;
+  padding: 1px;
+  margin-bottom: 10px;
+}
+
+.img-shop:hover {
+  transform: scale(0.9);
+}
+
+.img-shop-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.9);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.img-shop-wrap:hover {
+  transform: scale(1);
+}
+
+.img-shop-wrap img {
+  width: 100%;
+  padding: 20px;
+  transform: scale(0.9);
+  border-radius: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.img-shop-wrap img:hover {
+  transform: scale(1);
+}
+
+.carry {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carry a {
+  color: #2c7860;
+  border-bottom: 3px solid transparent;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.carry a:hover {
+  border-bottom: 3px solid #2c7860;
+  animation: border 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.quote {
+  padding: 0 7%;
+  margin-bottom: 70px;
+}
+
+.left-quote-wrap {
+  display: none;
+}
+
+.right-quote-wrap {
+  display: none;
+}
+
+@keyframes shop {
+  0% {
+    transition: 0.85s ease-in-out;
+    transform: scale(1.25);
+  }
+
+	0% {
+    transition: 0.85s ease-in-out;
+    transform: scale(1);
+  }
+
+  100% {
+    transition: 0.85s ease-in-out;
+    transform: scale(1.25);
+  }
+}
+
+.quote-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.quote-img img {
+	animation: shop 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.quote-details {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-mid p {
+  text-align: center;
+  width: 230px;
+  margin-bottom: 35px;
+}
+
+.quote-mid span {
+  border-bottom: 3px solid #2c7860;
+  animation: border 0.95s linear 0.5s infinite alternate-reverse both;
+  padding-bottom: 8px;
+}
+
+.quote-mid .buyer {
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.quote-img img {
+  width: 5%;
+}
+
+.footer {
+  background-color: black;
+  color: #bbbbbb;
+  padding: 7% 7%;
+}
+
+.footer a {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+
+.footer-wrapper {
+  padding: 0 0;
+}
+
+.address {
+  margin-bottom: 70px;
+}
+
+.company h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  animation: head 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.location p {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.sign-up {
+  display: flex;
+  justify-content: center;
+}
+
+div.sign-up a {
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  padding: 15px 35px;
+  border-radius: 5px;
+  color: black;
+}
+
+.sign-up a:hover {
+  animation: homepage 0.95s linear 0.5s infinite alternate-reverse both;
+}
+
+.main-links,
+.mid-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+div.link-active a {
+  color: white;
+}
+
+.nav-main div,
+.nav-mid div {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-end > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.nav-main div > a {
+  text-decoration: none;
+  text-align: center;
+}
+
+div.nav-end > .footer-social-wrapper {
+  margin-bottom: 0px;
+  display: flex;
+  gap: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .nav div > a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px;
+    border-bottom: 3px solid transparent;
+    transition: 0.5s ease-in-out;
+  }
+
+  .nav a:hover {
+    border-bottom: 3px solid #2c7860;
+  }
+
+  .Log {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .Log a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 0px;
+    border-bottom: 3px solid transparent;
+    transition: 0.5s ease-in-out;
+  }
+
+  .Log a:hover {
+    border-bottom: 3px solid #2c7860;
+  }
+
+  .login a {
+    padding: 15px 35px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    border: none;
+  }
+
+  .login a:hover {
+    animation: img 0.95s linear 0.5s infinite alternate-reverse both;
+    border: none;
+    background-color: #2c7860;
+  }
+
+  .about {
+    padding-top: 35px;
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  .voucher-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .voucher-details {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  .voucher-head {
+    width: 100%;
+    height: 100%;
+  }
+
+  .voucher-details h1 {
+    font-size: 4vw;
+  }
+
+  .voucher-nav {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .voucher-nav a {
+    text-decoration: none;
+    padding: 15px 35px;
+  }
+
+  .voucher-img {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .voucher-img div {
+    width: 200px;
+  }
+
+  .voucher-img > div > img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-45deg);
+  }
+
+  .shop-products {
+    gap: 25px;
+  }
+
+  .shop-product-wrap {
+    padding: 15px;
+  }
+
+  .quote-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .left-quote-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 2em;
+    width: 33.33%;
+  }
+
+  .quote-content {
+    width: 33.33%;
+  }
+
+  .right-quote-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    font-size: 2em;
+    width: 33.33%;
+  }
+
+  .footer {
+    background-color: black;
+    color: #bbbbbb;
+  }
+
+  .company h1 {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+
+  .footer a {
+    color: #bbbbbb;
+    text-decoration: none;
+  }
+
+  .footer-wrapper {
+		padding: 0 0;
+    display: flex;
+    gap: 25px;
+  }
+
+  .main-links,
+  .mid-links,
+  .end-links {
+    width: 20%;
+  }
+
+  .address {
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 40%;
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .location p {
+    text-align: left;
+    margin-bottom: 35px;
+  }
+
+  .sign-up {
+    display: flex;
+    justify-content: start;
+  }
+
+  div.sign-up a {
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    color: black;
+  }
+
+  .main-links,
+  .mid-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage p {
+    width: 50%;
+    border-radius: 5px;
+  }
+
+  .homepage h1 {
+    font-size: 6vw;
+    width: 70%;
+  }
+
+  .sales-products {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    color: black;
+  }
+
+  .about {
+    padding-top: 35px;
+    display: flex;
+    gap: 25px;
+    flex-direction: row;
+    cursor: pointer;
+  }
+
+  .voucher-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .voucher-details {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+  }
+
+  .voucher-head {
+    width: 100%;
+    height: 100%;
+  }
+
+  .voucher-details h1 {
+    font-size: 4vw;
+  }
+
+  .voucher-nav {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .voucher-nav a {
+    text-decoration: none;
+    padding: 15px 35px;
+  }
+
+  .voucher-img {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .voucher-img div {
+    width: 300px;
+  }
+
+  .voucher-img > div > img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-45deg);
+  }
+
+  .shop-products {
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+  }
+
+  .shop-product-wrap {
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px #bbbbbb;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .brands {
+    padding: 0 7%;
+    color: #bbbbbb;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    flex-wrap: wrap;
+    font-family: cursive;
+  }
+
+  .sales-nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+  }
+
+  .shop-nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+  }
+
+  .shop-products {
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+  }
+
+  .quote-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .left-quote-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 2em;
+    width: 33.33%;
+  }
+
+  .quote-content {
+    width: 33.33%;
+  }
+
+  .right-quote-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    font-size: 2em;
+    width: 33.33%;
+  }
+
+	.footer {
+		padding: 2% 7%;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.header {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	a {
+		font-size: 1em;
+	}
+
+	.homepage {
+		margin: 0 10%;
+		font-size: 1.8em;
+	}
+
+	.homepage h1 {
+		font-size: 4vw;
+		width: 60%;
+	}
+
+	.homepage p {
+		width: 35%;
+	}
+
+	.brands {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	.sales {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	.about-wrapper {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	.voucher {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	
+  .voucher-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .voucher-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+  }
+
+	.voucher-img {
+		width: 50%;
+	}
+
+  .voucher-head {
+    width: 100%;
+    height: 100%;
+  }
+
+  .voucher-details h1 {
+    font-size: 3vw;
+  }
+
+  .voucher-nav {
+    width: 100%;
+		display: flex;
+		justify-content: start;
+    margin-bottom: 0px;
+  }
+
+  .voucher-nav a {
+    text-decoration: none;
+    padding: 15px 35px;
+  }
+
+
+	.our-shop {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	.quote {
+		padding: 2% 10%;
+		font-size: 1.8em;
+	}
+
+	.footer {
+		padding: 4% 10%;
+	}
+}
